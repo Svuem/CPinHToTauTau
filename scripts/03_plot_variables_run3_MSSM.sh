@@ -14,9 +14,9 @@ args=(
         --cf.MergeReducedEvents-workflow $workflow
         --variables $variables
         --file-types pdf,png
-	    --hist-hooks good_old_abcd
+	    #--hist-hooks good_old_abcd
         --general-settings "cms-label=pw"
-        --process-settings "h_ggf_htt,unstack,scale=stack"
+        #--process-settings "h_ggf_htt_60,unstack,scale=1,color=#FF0000:h_ggf_htt_125,unstack,scale=1,color=#0000FF:h_ggf_htt_200,unstack,scale=1"
         "${@:2}"
     )
 echo law run cf.PlotVariables1D "${args[@]}"

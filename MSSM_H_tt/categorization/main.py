@@ -111,6 +111,11 @@ def One_b_jets(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array,
     return events, mask
 
 @categorizer(uses={"N_b_jets"})
+def At_least_1_b_jets(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
+    mask = events.N_b_jets >= 1 
+    return events, mask
+
+@categorizer(uses={"N_b_jets"})
 def At_least_2_b_jets(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
     mask = events.N_b_jets >= 2 
     return events, mask
@@ -197,10 +202,30 @@ def D_zeta_cut_low(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Ar
 
 @categorizer(uses={'D_zeta'})
 def D_zeta_cut_mid(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
-    mask = (events.D_zeta >= -10) & (events.D_zeta < 30)
+    mask = (events.D_zeta >= -10)
     return events, mask
 
 @categorizer(uses={'D_zeta'})
 def D_zeta_cut_high(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
     mask = (events.D_zeta >= 30)
+    return events, mask
+
+@categorizer(uses={'D_zeta'})
+def D_zeta_cut_20(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
+    mask = (events.D_zeta >= -20)
+    return events, mask
+
+@categorizer(uses={'D_zeta'})
+def D_zeta_cut_40(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
+    mask = (events.D_zeta >= -40)
+    return events, mask
+
+@categorizer(uses={'D_zeta'})
+def D_zeta_cut_60(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
+    mask = (events.D_zeta >= -60)
+    return events, mask
+
+@categorizer(uses={'D_zeta'})
+def D_zeta_cut_80(self: Categorizer, events: ak.Array, **kwargs) -> tuple[ak.Array, ak.Array]:
+    mask = (events.D_zeta >= -80)
     return events, mask

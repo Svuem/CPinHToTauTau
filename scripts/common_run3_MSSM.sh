@@ -2,7 +2,7 @@
 
 set_common_vars() {
 
-version="desy_dev"
+version="sven_thesis"
 
 categories_mutau="cat_mutau_sr"
 variables_mutau='mutau_lep0_pt,mutau_lep0_eta,mutau_lep0_phi,mutau_lep0_ip_sig,mutau_lep1_pt,mutau_lep1_eta,mutau_lep1_phi,mutau_lep1_mass,mutau_lep1_decayModePNet,mutau_lep1_decayMode,mutau_mt,mutau_mvis,mutau_delta_eta,mutau_delta_r,mutau_pt,puppi_met_pt,puppi_met_phi'
@@ -11,10 +11,14 @@ categories_etau="cat_etau_sr"
 # cat_etau_sr_no_mT,cat_etau_sr_b_jets,cat_etau_sr_b_jets_no_mT,cat_etau_sr_0_bjets,cat_etau_sr_0_bjets_endcap_tau,cat_etau_sr_0_bjets_barrel_tau,cat_etau_sr_0_bjets_no_mt,cat_etau_sr_0_bjets_endcap_tau_no_mt,cat_etau_sr_0_bjets_barrel_tau_no_mt,cat_etau_sr_1_bjets,cat_etau_sr_1_bjets_endcap_tau,cat_etau_sr_1_bjets_barrel_tau,cat_etau_sr_1_bjets_no_mt,cat_etau_sr_1_bjets_endcap_tau_no_mt,cat_etau_sr_1_bjets_barrel_tau_no_mt,cat_etau_sr_2_bjets,cat_etau_sr_2_bjets_endcap_tau,cat_etau_sr_2_bjets_barrel_tau,cat_etau_sr_2_bjets_no_mt,cat_etau_sr_2_bjets_endcap_tau_no_mt,cat_etau_sr_2_bjets_barrel_tau_no_mt"
 variables_etau='N_b_jets,N_jets_pT_20_eta_2_5_Tight,mjj,N_jets_pT_20_eta_4_7_Tight,Leading_jet_pt,Subleading_jet_pt,delta_eta_jj,etau_lep0_pt,etau_lep0_eta,etau_lep0_phi,etau_lep0_ip_sig,etau_lep1_pt,etau_lep1_eta,etau_lep1_phi,etau_lep1_mass,etau_lep1_decayModePNet,etau_lep1_decayMode,etau_mt,etau_mvis,etau_delta_r,etau_pt,puppi_met_pt,puppi_met_phi'
 
-categories_emu="cat_emu_sr"
+categories_emu="cat_emu_sr__nj0,cat_emu_sr__nj0__dzl,cat_emu_sr__nj0__dzm"
+categories_emu_variables="cat_emu_sr,cat_emu_sr__dzl,cat_emu_sr__dzm"
+categories_emu_lim="cat_emu_sr__nj0__dzl"
 #,cat_emu_sr_no_mT,cat_emu_sr_b_jets,cat_emu_sr_b_jets_no_mT,cat_emu_sr_0_bjets,cat_emu_sr_0_bjets_endcap_tau,cat_emu_sr_0_bjets_barrel_tau,cat_emu_sr_0_bjets_no_mt,cat_emu_sr_0_bjets_endcap_tau_no_mt,cat_emu_sr_0_bjets_barrel_tau_no_mt,cat_emu_sr_1_bjets,cat_emu_sr_1_bjets_endcap_tau,cat_emu_sr_1_bjets_barrel_tau,cat_emu_sr_1_bjets_no_mt,cat_emu_sr_1_bjets_endcap_tau_no_mt,cat_emu_sr_1_bjets_barrel_tau_no_mt,cat_emu_sr_2_bjets,cat_emu_sr_2_bjets_endcap_tau,cat_emu_sr_2_bjets_barrel_tau,cat_emu_sr_2_bjets_no_mt,cat_emu_sr_2_bjets_endcap_tau_no_mt,cat_emu_sr_2_bjets_barrel_tau_no_mt"
 
-variables_emu='emu_mt_tot,emu_mt_emu,D_zeta,emu_mt_e,emu_mt_mu,N_jets_pT_20_eta_4_7_Tight,leading_jet_eta,subleading_jet_eta,leading_jet_phi,subleading_jet_phi,N_b_jets,mjj,N_jets_pT_20_eta_4_7_Tight,leading_jet_pt,subleading_jet_pt,delta_eta_jj,emu_lep0_pt,emu_lep0_eta,emu_lep0_phi,emu_lep0_ip_sig,emu_lep1_pt,emu_lep1_eta,emu_lep1_phi,emu_lep1_ip_sig,emu_mvis,emu_delta_r,emu_pt,puppi_met_pt,puppi_met_phi'
+#variables_emu='emu_mt_tot,emu_mt_emu,D_zeta,emu_mt_e,emu_mt_mu,N_jets_pT_20_eta_4_7_Tight,leading_jet_eta,subleading_jet_eta,leading_jet_phi,subleading_jet_phi,N_b_jets,mjj,N_jets_pT_20_eta_4_7_Tight,leading_jet_pt,subleading_jet_pt,delta_eta_jj,emu_lep0_pt,emu_lep0_eta,emu_lep0_phi,emu_lep0_ip_sig,emu_lep1_pt,emu_lep1_eta,emu_lep1_phi,emu_lep1_ip_sig,emu_mvis,emu_delta_r,emu_pt,puppi_met_pt,puppi_met_phi'
+variables_emu='emu_mt_tot,D_zeta,N_jets_pT_20_eta_4_7_Tight,N_b_jets,emu_pt,puppi_met_pt,puppi_met_phi'
+variables_emu_variables='N_b_jets'
 
 data_egamma_2022preEE='data_egamma_C,data_egamma_D,'
 data_muoneg_2022preEE='data_muoneg_C,data_muoneg_D,'
@@ -27,7 +31,12 @@ data_mu_2022postEE='data_mu_E,data_mu_F,data_mu_G,'
 bkg_ewk='wj_incl_madgraph,ww,wz,zz,dy_lep_madgraph,'
 bkg_top='st_twchannel_t_dl,st_twchannel_t_sl,st_twchannel_tbar_sl,st_twchannel_tbar_dl,st_tchannel_tbar,st_tchannel_t,st_schannel_t_lep,st_schannel_tbar_lep,'
 bkg_ttbar='tt_sl,tt_dl,tt_fh,'
-mssm_signal='h_tt_100'
+mssm_signal='h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200'
+mssm_signal_70='h_ggf_htt_70,h_ggf_htt_75, h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200'
+mssm_signal_variables='h_ggf_htt_60,h_ggf_htt_125,h_ggf_htt_200'
+mssm_signal_test130='h_ggf_htt_125,h_ggf_htt_130'
+# h_ggf_htt_75, h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
+mssm_signal_80_100_120='h_ggf_htt_80,h_ggf_htt_100,h_ggf_htt_120'
 #st_twchannel_t_dl
 data_egamma_2023preBPix='data_egamma_Cv123,data_egamma_Cv4,'
 data_egamma_2023postBPix='data_egamma_D,'
@@ -50,7 +59,7 @@ case $1 in
     ;;
     "run3_2022preEE_emu_lim")
         config="run3_2022_preEE_emu_limited"	
-        datasets='dy_lep_madgraph' #h_tt_100' 
+        datasets='dy_lep_madgraph' #h_htt_100' 
         processes='dy_lep' #h_ggf_htt' #data,dy_lep,
 	      categories='cat_emu_sr'
 	      variables='emu_lep0_pt,emu_lep1_pt'
@@ -85,11 +94,11 @@ case $1 in
         bkg_ewk=$bkg_ewk
         bkg_top=$bkg_top
         bkg_ttbar=$bkg_ttbar
-        datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal
-        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt'
-	      categories='cat_emu_sr'
-	      variables=$variables_emu
-	      workflow='htcondor'
+        datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal_70
+        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200'
+	    categories=$categories_emu
+	    variables=$variables_emu
+	    workflow='htcondor'
     ;;
     "run3_2022preEE_emu_st")
         config="run3_2022_preEE_emu"
@@ -124,11 +133,11 @@ case $1 in
     ;;
     "run3_2022postEE_emu_lim")
         config="run3_2022_postEE_emu_limited"
-        datasets='data_egamma_E,dy_lep_madgraph,h_tt_100'
-        processes='data,dy_lep,h_ggf_htt'
-	      categories='cat_emu_sr__nj0__dzh'
+        datasets='data_egamma_E,dy_lep_madgraph,h_ggf_htt_100'
+        processes='data,dy_lep,h_ggf_htt_100'
+	      categories='cat_emu_sr__nj0__dzl'
         #cat_emu_sr__nj0__dzm,cat_emu_sr__nj0__dzh,cat_emu_sr__nj1__dzl,cat_emu_sr__nj1__dzm,cat_emu_sr__nj1__dzh,cat_emu_sr__nj2__dzl,cat_emu_sr__nj2__dzm,cat_emu_sr__nj2__dzh'
-	      variables='D_zeta' #emu_mt_e,emu_mt_mu,emu_mt_tot,emu_mt_emu'
+	    variables='D_zeta' #emu_mt_e,emu_mt_mu,emu_mt_tot,emu_mt_emu'
         workflow='local'
     ;;
     "run3_2022postEE_mutau_lim")
@@ -138,6 +147,15 @@ case $1 in
 	      categories='cat_mutau_sr'
 	      variables='N_b_jets'
         workflow='local'
+    ;;
+    "run3_2022postEE_emu_test130_lim")
+        config="run3_2022_postEE_emu_test130_limited"
+        datasets=$mssm_signal_test130
+        processes='h_ggf_htt_125,h_ggf_htt_130'
+        # h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
+	      categories=$categories_emu
+	      variables=$variables_emu
+	    workflow='local'
     ;;
 #########################
 ####### 2022postEE ######
@@ -161,10 +179,39 @@ case $1 in
         bkg_top=$bkg_top
         bkg_ttbar=$bkg_ttbar
         datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal
-        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt'
-	      categories='cat_emu_sr__nj0__dzh' #$categories_emu
-	      variables=$variables_emu
-	      workflow='htcondor'
+        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200'
+        # h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
+	    categories=$categories_emu
+	    variables=$variables_emu
+	    workflow='htcondor'
+    ;;
+    "run3_2022postEE_emu_test130")
+        config="run3_2022_postEE_emu"
+        data=$data_egamma_2022postEE$data_mu_2022postEE
+        bkg_ewk=$bkg_ewk
+        bkg_top=$bkg_top
+        bkg_ttbar=$bkg_ttbar
+        datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal_test130
+        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt_125,h_ggf_htt_130'
+        # h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
+	    categories=$categories_emu
+	    variables=$variables_emu
+	    workflow='htcondor'
+    ;;
+        "run3_2022postEE_emu_nodata")
+        config="run3_2022_postEE_emu"
+        # data=$data_egamma_2022postEE$data_mu_2022postEE
+        # bkg_ewk=$bkg_ewk
+        # bkg_top=$bkg_top
+        # bkg_ttbar=$bkg_ttbar
+        # datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal_variables
+        datasets=$mssm_signal_variables
+        # processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt_60,h_ggf_htt_125,h_ggf_htt_200'
+        processes='h_ggf_htt_60,h_ggf_htt_125,h_ggf_htt_200'
+        # h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
+	    categories=$categories_emu_variables
+	    variables=$variables_emu_variables
+	    workflow='htcondor'
     ;;
     "run3_2022postEE_emu_2D")
         config="run3_2022_postEE_emu"
@@ -210,11 +257,11 @@ case $1 in
         workflow='local'
     ;;
     "run3_2023preBPix_emu_lim")
-        config="run3_2023_preBPix_emu"
-        datasets='data_mu_Cv123' #dy_lep_madgraph
+        config="run3_2023_preBPix_emu_limited"
+        datasets='data_mu_Cv4,data_mu_Cv123' #dy_lep_madgraph
         processes='data' #dy_lep
         categories='cat_emu_sr'
-        variables='N_b_jets'
+        variables='D_zeta'
         workflow='local'
     ;;
     "run3_2023preBPix_mutau_lim")
@@ -242,12 +289,13 @@ case $1 in
     ;;
     "run3_2023preBPix_emu")
         config="run3_2023_preBPix_emu"
-        data=$data_egamma_2023preBPix #$data_mu_2023preBPix
+        data=$data_egamma_2023preBPix$data_mu_2023preBPix
         bkg_ewk=$bkg_ewk
         bkg_top=$bkg_top
         bkg_ttbar=$bkg_ttbar
-        datasets="$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal"
-        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt'
+        datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal
+        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200'
+        # ,h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
         categories=$categories_emu
         variables=$variables_emu
         workflow='htcondor'
@@ -277,8 +325,8 @@ case $1 in
     ;;
     "run3_2023postBPix_emu_lim")
         config="run3_2023_postBPix_emu_limited"
-        datasets='dy_lep_madgraph,data_muoneg_D'
-        processes='dy_lep,data'
+        datasets='data_egamma_D,dy_lep_madgraph'
+        processes='data'
         categories='cat_emu_sr'
         variables='N_b_jets'
         workflow='local'
@@ -288,7 +336,7 @@ case $1 in
         datasets='dy_lep_madgraph,data_mu_D'
         processes='dy_z2mumu,dy_z2ee,dy_z2tautau,data'
         categories='cat_mutau_sr'
-        variables='N_b_jets'
+        variables='mt_tot'
         workflow='local'
     ;;
 ############################
@@ -312,8 +360,9 @@ case $1 in
         bkg_ewk=$bkg_ewk
         bkg_top=$bkg_top
         bkg_ttbar=$bkg_ttbar
-        datasets="$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal"
-        processes='dy_lep,vv,tt,st,wj,data,h_ggf_htt'
+        datasets=$data$bkg_ewk$bkg_top$bkg_ttbar$mssm_signal
+        processes='dy_lep,vv,tt,st,wj,data,,h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,h_ggf_htt_80,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200'
+        # h_ggf_htt_80,h_ggf_htt_100,h_ggf_htt_60,h_ggf_htt_65,h_ggf_htt_70,h_ggf_htt_75,,h_ggf_htt_85,h_ggf_htt_90,h_ggf_htt_95,h_ggf_htt_100,h_ggf_htt_105,h_ggf_htt_110,h_ggf_htt_115,h_ggf_htt_120,h_ggf_htt_125,h_ggf_htt_130,h_ggf_htt_135,h_ggf_htt_140,h_ggf_htt_160,h_ggf_htt_180,h_ggf_htt_200,h_ggf_htt_250,h_ggf_htt_300,h_ggf_htt_350,h_ggf_htt_400,h_ggf_htt_450,h_ggf_htt_500,h_ggf_htt_600,h_ggf_htt_700,h_ggf_htt_800,h_ggf_htt_900,h_ggf_htt_1000,h_ggf_htt_1100,h_ggf_htt_1200,h_ggf_htt_1400,h_ggf_htt_1600,h_ggf_htt_1800,h_ggf_htt_2000,h_ggf_htt_2300,h_ggf_htt_2600,h_ggf_htt_2900,h_ggf_htt_3200,h_ggf_htt_3500'
         categories=$categories_emu
         variables=$variables_emu
         workflow='htcondor'

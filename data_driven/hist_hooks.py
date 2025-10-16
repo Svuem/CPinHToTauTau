@@ -79,6 +79,7 @@ def add_hist_hooks(config: od.Config) -> None:
     def qcd_estimation(task, hists, category_inst):
         
         def get_hists_from_reg(config: od.Config, hists: dict, region: str)-> hist.Hist :
+            #from IPython import embed; embed()
             hists_ = hists[region]
             cat_id = config.get_category(region).id
             data_hists = []
@@ -88,16 +89,19 @@ def add_hist_hooks(config: od.Config) -> None:
                     data_hists.append(h)
                 elif proc.is_mc and not proc.has_tag("signal"):
                     mc_hists.append(h)
-            
+
+                    ### Fix???
+            from IPython import embed; embed()
             mc_hist = sum(mc_hists[1:], mc_hists[0].copy())
             data_hist = sum(data_hists[1:], data_hists[0].copy())
-            
+
             return data_hist, mc_hist
         
         sr = category_inst
+        
         data_num, mc_num = get_hists_from_reg(config, hists,sr.aux['abcd_regs']['dr_num'])
         data_den, mc_den = get_hists_from_reg(config, hists, sr.aux['abcd_regs']['dr_den']) 
-        data_ar, mc_ar = get_hists_from_reg(config, hists,sr.aux['abcd_regs']['ar'])
+        data_ar, mc_ar   = get_hists_from_reg(config, hists,sr.aux['abcd_regs']['ar'])
         num = np.sum(data_num.values()) - np.sum(mc_num.values())
         den = np.sum(data_den.values()) - np.sum(mc_den.values()) 
         

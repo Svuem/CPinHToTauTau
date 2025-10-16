@@ -138,8 +138,8 @@ def add_categories(config: od.Config,
         # TODO: Define DZ categories here 
 
         "nj0"    : {'selection' : ["Zero_b_jets"], 'label'     : f" \n $n_{{jets}}= 0$",},
-        "nj1"    : {'selection' : ["One_b_jets"], 'label'     : f" \n $n_{{jets}}= 1$",},
-        "nj2"    : {'selection' : ["At_least_2_b_jets"], 'label'     : f" \n $n_{{jets}}\geq 2$",},       
+        #"nj1"    : {'selection' : ["At_least_1_b_jets"], 'label'     : f" \n $n_{{jets}}\geq 1$",},
+        #"nj2"    : {'selection' : ["At_least_2_b_jets"], 'label'     : f" \n $n_{{jets}}\geq 2$",},       
         })
     
     create_child_categories(config,
@@ -150,9 +150,14 @@ def add_categories(config: od.Config,
 
         "dzl"    : {'selection' : ["D_zeta_cut_low"], 'label'     : f" \n $ -35 \leq D_{{\zeta}} < -10$",},
         "dzm"    : {'selection' : ["D_zeta_cut_mid"], 'label'     : f" \n $ -10 \leq D_{{\zeta}} < 30 $",},
-        "dzh"    : {'selection' : ["D_zeta_cut_high"], 'label'     : f" \n $D_{{\zeta}}\geq 30$",},       
+        #"dzh"    : {'selection' : ["D_zeta_cut_high"], 'label'     : f" \n $D_{{\zeta}}\geq 30$",},       
+        # "dz_20"    : {'selection' : ["D_zeta_cut_20"], 'label'     : f" \n $D_{{\zeta}}\geq -20$",},
+        # "dz_40"    : {'selection' : ["D_zeta_cut_40"], 'label'     : f" \n $D_{{\zeta}}\geq -40 $",},
+        # "dz_60"    : {'selection' : ["D_zeta_cut_60"], 'label'     : f" \n $D_{{\zeta}}\geq -60$",},  
+        # "dz_80"    : {'selection' : ["D_zeta_cut_80"], 'label'     : f" \n $D_{{\zeta}}\geq -80$",},  
         })
     
     create_child_categories(config,
                         parent_categories=config.categories.names(),
                         child_category_map=grand_child_category_map)
+    # from IPython import embed ; embed()
